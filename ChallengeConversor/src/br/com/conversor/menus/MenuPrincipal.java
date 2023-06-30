@@ -1,14 +1,18 @@
 package br.com.conversor.menus;
 
+import java.awt.JobAttributes;
+
 import javax.swing.JOptionPane;
 
-public class MenuPrincipal {
+import br.com.conversor.menus.conversores.Conversor;
+
+public class MenuPrincipal extends Conversor {
 
 	public static void main(String[] args) {
-		// vetor de opções
+		//VETORE DE OPÇÂO
 		String[] opcaoDeEscolhaConversor = { "Conversor de Moeda", "Conversor de Temperatura" };
 
-		// caixa do menu
+		//CAIXA DE MENU
 		String entrada = (String) JOptionPane.showInputDialog(null, "Escolha uma opçao", "Menu",
 				JOptionPane.QUESTION_MESSAGE, null, opcaoDeEscolhaConversor, opcaoDeEscolhaConversor[0]);
 		
@@ -24,9 +28,15 @@ public class MenuPrincipal {
 			
 			String menuMoeda = (String) JOptionPane.showInputDialog(null, "Escolha a moeda para qual você deseja converter seu dinheiro", "Moedas",
 					JOptionPane.QUESTION_MESSAGE, null, opcaoDeMoeda, opcaoDeMoeda[0]);
-			if (menuMoeda == opcaoDeMoeda[i]) {
+			if (menuMoeda == opcaoDeMoeda[0]) {
+				Conversor c = new Conversor();
+				c.setReal(Dinheiro);
+				c.setDolar(5.00);
+				double soma = c.getReal() / c.getDolar();
 				
+				JOptionPane.showMessageDialog(null, "A convesão de Real para Dolar é $"+ soma);
 			}
+			
 			
 		}//CAIXA DE CONVEÇÃO TEMPERATURA
 		else if (entrada == opcaoDeEscolhaConversor[1]) {
