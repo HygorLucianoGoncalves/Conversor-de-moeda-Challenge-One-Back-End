@@ -14,6 +14,7 @@ public class Quilometragem {
 	public void setIndice(int indice) {
 		this.indice = indice;
 	}
+	
 	public void ChamaKM() {
 		try {
 			double quilometragem = Double.parseDouble(JOptionPane.showInputDialog(null,"Digite a Quilometragem", 0));
@@ -52,10 +53,8 @@ public class Quilometragem {
 			valores.add(quilometragem / 39370);
 			valores.add(quilometragem / 1.852);
 			
-			
 			String menuQuilo= (String) JOptionPane.showInputDialog(null, "Escolha a conversçao desejada", "Temperatura",
 					JOptionPane.QUESTION_MESSAGE, null, opcaoconversao, opcaoconversao[0]);
-			
 			
 			for (int i = 0; i < opcaoconversao.length; i++) {
 				if (menuQuilo.equals(opcaoconversao[i])) {
@@ -67,11 +66,7 @@ public class Quilometragem {
 				JOptionPane.showMessageDialog(null, "A conversão é de: " + valores.get(getIndice()));
 			}else if (getIndice() > 7) {
 				JOptionPane.showMessageDialog(null, "A conversão é de: " + valores.get(getIndice()));
-
 			}
-			
-			
-			
 		} catch (NumberFormatException ex) {
 			JOptionPane.showMessageDialog(null, "Erro no valor Informado.\n informe uma Quilometragem correto");
 
