@@ -5,16 +5,15 @@ import javax.swing.JOptionPane;
 public class MenuPrincipal {
 
 	public static void main(String[] args) {
+		Menu menu = new Menu();
+
 		while (true) {
-			Menu menu = new Menu();
 			menu.ChamaMenu();
+
 			int desejaContinuar = JOptionPane.showConfirmDialog(null, "Deseja Continuar", "continuar",
 					JOptionPane.YES_NO_CANCEL_OPTION);
-			if (desejaContinuar == 0) {
-				menu.ChamaMenu();
-				int continuar = JOptionPane.showConfirmDialog(null, "Deseja Continuar", "continuar",
-						JOptionPane.YES_NO_CANCEL_OPTION);
-			} else {
+
+			if (desejaContinuar != JOptionPane.YES_OPTION) {
 				JOptionPane.showMessageDialog(null, "Programa Finalizado");
 				break;
 			}

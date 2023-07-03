@@ -17,7 +17,7 @@ public class Temperaturas {
 					"De Kelvin(K) Para Fahrenheit(F)",
 					"De Kelvin(K) Para Celsius(C)" };
 
-			String menuTemo = (String) JOptionPane.showInputDialog(null, "Escolha a conversçao dejejada", "Temperatura",
+			String menuTemo = (String) JOptionPane.showInputDialog(null, "Escolha a conversçao desejada", "Temperatura",
 					JOptionPane.QUESTION_MESSAGE, null, opcaoDeTemp, opcaoDeTemp[0]);
 
 			int indice = -1;
