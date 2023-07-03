@@ -2,6 +2,9 @@
 
 Este repositório contém três programas simples em Java: um Conversor de Moeda, um Conversor de Quilometragem e um Conversor de Temperatura. Esses programas permitem converter valores entre diferentes moedas, unidades de quilometragem e escalas de temperatura, respectivamente.
 
+![1688409951245](https://github.com/HygorLucianoGoncalves/Conversor-de-moeda-Challenge-One-Back-End/assets/128493484/7d5c16f0-c38d-4f4b-9067-f8a1f6087dd8)
+
+
 ## Conversor de Moeda
 
 O Conversor de Moeda permite converter valores monetários entre diferentes moedas. Ele utiliza taxas de câmbio predefinidas para realizar as conversões.
