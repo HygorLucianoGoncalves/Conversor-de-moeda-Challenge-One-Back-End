@@ -17,8 +17,6 @@ public class Quilometragem {
 	
 	public void ChamaKM() {
 		try {
-			double quilometragem = Double.parseDouble(JOptionPane.showInputDialog(null,"Digite a Quilometragem", 0));
-			
 			String[] opcaoconversao = {
 					"De Quilômetros para Metro",
 					"De Quilômetros para Centímetros",
@@ -36,6 +34,13 @@ public class Quilometragem {
 					"De Milhas Náutica para Quilômetros"
 			};
 
+			
+			
+			String menuQuilo= (String) JOptionPane.showInputDialog(null, "Escolha a conversçao desejada", "Temperatura",
+					JOptionPane.QUESTION_MESSAGE, null, opcaoconversao, opcaoconversao[0]);
+			
+			double quilometragem = Double.parseDouble(JOptionPane.showInputDialog(null,"Digite o valor", 0));
+			
 			ArrayList<Double> valores = new ArrayList<Double>();
 			valores.add(quilometragem * 1000);//Q PRA METRO
 			valores.add(quilometragem * 10000);// Q PRA CENTRIMETRO
@@ -52,9 +57,6 @@ public class Quilometragem {
 			valores.add(quilometragem / 3281);
 			valores.add(quilometragem / 39370);
 			valores.add(quilometragem / 1.852);
-			
-			String menuQuilo= (String) JOptionPane.showInputDialog(null, "Escolha a conversçao desejada", "Temperatura",
-					JOptionPane.QUESTION_MESSAGE, null, opcaoconversao, opcaoconversao[0]);
 			
 			for (int i = 0; i < opcaoconversao.length; i++) {
 				if (menuQuilo.equals(opcaoconversao[i])) {

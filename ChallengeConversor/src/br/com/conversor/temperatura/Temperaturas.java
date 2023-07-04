@@ -7,8 +7,6 @@ public class Temperaturas {
 
 	public void ChamaTemp() {
 		try {
-			double temperatura = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "Digite a Temperatura ", 0));
 			String[] opcaoDeTemp = { 
 					"De Celsius(C) Para Fahrenheit(F)",
 					"De Celsius(C) Para Kelvin(K)",
@@ -19,7 +17,10 @@ public class Temperaturas {
 
 			String menuTemo = (String) JOptionPane.showInputDialog(null, "Escolha a conversçao desejada", "Temperatura",
 					JOptionPane.QUESTION_MESSAGE, null, opcaoDeTemp, opcaoDeTemp[0]);
-
+			
+			double temperatura = Double
+					.parseDouble(JOptionPane.showInputDialog(null, "Digite a Temperatura ", 0));
+			
 			int indice = -1;
 
 			for (int i = 0; i < opcaoDeTemp.length; i++) {

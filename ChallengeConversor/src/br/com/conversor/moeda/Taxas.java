@@ -7,9 +7,6 @@ public class Taxas {
 	public void OpcaoMoeda() {
 		try {
 
-			// PEGA O VALOR
-			double dinheiro = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor",0));
-
 			// OPÇÂO DE MOEDAS
 			String[] opcaoDeMoeda = { 
 					"De Reais a Dólares",
@@ -46,6 +43,10 @@ public class Taxas {
 			String menuMoeda = (String) JOptionPane.showInputDialog(null,
 					"Escolha a moeda para qual você deseja converter seu dinheiro", "Moedas",
 					JOptionPane.QUESTION_MESSAGE, null, opcaoDeMoeda, opcaoDeMoeda[0]);
+			
+			// PEGA O VALOR
+			double dinheiro = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor",0));
+
 
 			int indice = -1;
 			
@@ -63,7 +64,7 @@ public class Taxas {
 			} else if (indice > 6) {
 				double taxa = dinheiro * taxas[indice];
 				JOptionPane.showMessageDialog(null,
-						"A conversão " + opcaoDeMoeda[indice] + String.format("%s = %.2f", "", taxa));
+						"A conversão " + opcaoDeMoeda[indice] + String.format("%s = %.2f", "", taxa) + " R$");
 			} else {
 				JOptionPane.showMessageDialog(null, "Erro no valor informado");
 			}
